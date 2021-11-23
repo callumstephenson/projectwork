@@ -8,7 +8,7 @@ import librosa
 import librosa.display
 from google.colab import drive
 def spectragram(inputPath, outputPath, cmapInput='binary', figsizeInput=(6.4,4.8), hop_lengthInput=512 , n_fftInput=2048, offsetInput=0):
-  '''A function to iterate over an input directory filled with .mp3 files and decompose them using a FFTs into an output folder of .pngs. 
+  '''A function to iterate over a directory filled with .mp3 files and decompose them using an FFT into .pngs. 
   inputPath = input folder path
   outputPath = output folder path
   hop_lengthInput = sample length to apply FFT
@@ -24,7 +24,7 @@ def spectragram(inputPath, outputPath, cmapInput='binary', figsizeInput=(6.4,4.8
     # File handling and output namescheme
     InputPath = str(inputPath) + musicFile
     OutputPath = str(outputPath) + musicFile[0:-4] + '_image.png'
-    y, sr = librosa.load(InputPath,offsetInput)
+    y, sr = librosa.load(InputPath,offset = offsetInput)
     # Trim Silent Edges
     plt.figure(figsize=figsizeInput)
     song, _ = librosa.effects.trim(y)
