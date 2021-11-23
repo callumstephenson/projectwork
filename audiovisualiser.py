@@ -7,15 +7,14 @@ import matplotlib.pyplot as plt
 import librosa
 import librosa.display
 from google.colab import drive
-def spectragram(inputPath, outputPath, cmapInput='binary', figsizeInput=(6.4,4.8), hop_lengthInput=512 , n_fftInput=2048, InputOffset=0):
-  '''A function to iterate over a directory filled with .mp3 files and decompose them using an FFT into .pngs. 
+def spectragram(inputPath, outputPath, cmapInput='binary', figsizeInput=(6.4,4.8), hop_lengthInput=512 , n_fftInput=2048, offsetInput=0):
+  '''A function to iterate over an input directory filled with .mp3 files and decompose them using a FFTs into an output folder of .pngs. 
   inputPath = input folder path
   outputPath = output folder path
-  op_length = sample length to apply FFT
-  n_fft = length of the windowed signal after padding with zeros, recommended to set to a power of 2.
-  cmap = colour map for the resulting image
-  pltaxis = if resulting image has axis
-  offset = offset from start of song to generate audio
+  hop_lengthInput = sample length to apply FFT
+  n_fftInput = length of the windowed signal after padding with zeros, recommended to set to a power of 2.
+  cmapInput = colour map for the resulting image
+  offsetInput = offset from start of song to generate audio
   pre-requisite packages: numpy (as np), matplotlib.pyplot(as plt), librosa, librosa.display, os'''
   
   musicFolder = os.listdir(str(inputPath))
@@ -25,7 +24,7 @@ def spectragram(inputPath, outputPath, cmapInput='binary', figsizeInput=(6.4,4.8
     # File handling and output namescheme
     InputPath = str(inputPath) + musicFile
     OutputPath = str(outputPath) + musicFile[0:-4] + '_image.png'
-    y, sr = librosa.load(InputPath,offset=InputOffset)
+    y, sr = librosa.load(InputPath,offsetInput)
     # Trim Silent Edges
     plt.figure(figsize=figsizeInput)
     song, _ = librosa.effects.trim(y)
