@@ -21,10 +21,10 @@ def spectragram(inputPath, outputPath, cmapInput='binary', figsizeInput=(6.4,4.8
   musicFolder = os.listdir(str(inputPath))
   i=0
   FileAmount = len(musicFolder)
-  for mFile in musicFolder:
+  for musicFile in musicFolder:
     # File handling and output namescheme
-    InputPath = str(inputPath) + mFile
-    OutputPath = str(outputPath) + mFile[0:-4] + '_image.png'
+    InputPath = str(inputPath) + musicFile
+    OutputPath = str(outputPath) + musicFile[0:-4] + '_image.png'
     y, sr = librosa.load(InputPath,offset=InputOffset)
     # Trim Silent Edges
     plt.figure(figsize=figsizeInput)
