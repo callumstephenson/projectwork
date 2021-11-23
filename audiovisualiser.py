@@ -8,7 +8,7 @@ import librosa
 import librosa.display
 from google.colab import drive
 def spectragram(inputPath, outputPath, cmapInput='binary', figsizeInput=(6.4,4.8), hop_lengthInput=512 , n_fftInput=2048, InputOffset=0):
-  '''A function to convert an mp3 file to a PNG. 
+  '''A function to iterate over a directory filled with .mp3 files and decompose them using an FFT into .pngs. 
   inputPath = input folder path
   outputPath = output folder path
   op_length = sample length to apply FFT
@@ -36,4 +36,3 @@ def spectragram(inputPath, outputPath, cmapInput='binary', figsizeInput=(6.4,4.8
     plt.set_cmap(str(cmapInput))
     plt.axis('off')
     plt.savefig(OutputPath,bbox_inches='tight')
-    ### RUN FUNCTION WITH CORRECT ARGS TO GET OUTPUT, ALL NECESSARY DEFAULT ARGS ARE SET.
