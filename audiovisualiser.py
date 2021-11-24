@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import librosa
 import librosa.display
 from google.colab import drive
-def ImageDecomposer(inputPath, outputPath, cmapInput='binary', figsizeInput=(6.4,4.8), hop_lengthInput=512 , n_fftInput=2048, offsetInput=0, colourIteration=False):
+def imageDecomposer(inputPath, outputPath, cmapInput='binary', figsizeInput=(6.4,4.8), hop_lengthInput=512 , n_fftInput=2048, offsetInput=0, colourIteration=False):
   '''A function to iterate over a directory filled with .mp3 files and decompose them using an FFT into .pngs. 
   inputPath = input folder path
   outputPath = output folder path
@@ -33,12 +33,12 @@ def ImageDecomposer(inputPath, outputPath, cmapInput='binary', figsizeInput=(6.4
     DB = librosa.amplitude_to_db(D, ref=np.max)
     librosa.display.specshow(DB, sr=sr, hop_length=hop_lengthInput, x_axis='time', y_axis='log');
     #Set colourmap of output image.
-    if colourIteration == False:
-      plt.set_cmap(str(cmapInput))
-      plt.axis('off')
-      plt.savefig(OutputPath,bbox_inches='tight')
-    else:
+    if iterateColours:
       for colourmap in matplotlib.plr.colormaps():
         plt.set_cmap(str(colourmap))
         plt.axis('off')
         plt.savefig(OutputPath,bbox_inches='tight')
+    else:
+      plt.set_cmap(str(cmapInput))
+      plt.axis('off')
+      plt.savefig(OutputPath,bbox_inches='tight')
