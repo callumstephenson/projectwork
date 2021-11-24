@@ -24,7 +24,7 @@ def imageDecomposer(inputPath, outputPath, cmapInput='binary', figsizeInput=(6.4
   for musicFile in musicFolder: 
     # File handling and output namescheme
     InputPath = str(inputPath) + musicFile
-    OutputPath = str(outputPath) + musicFile[0:-4] + '_image.png'
+    OutputPath = str(outputPath) + musicFile[0:-4] + '_' + str(cmapInput) + '_image.png'
     y, sr = librosa.load(InputPath,offset = offsetInput)
     # Trim Silent Edges
     plt.figure(figsize=figsizeInput)
@@ -35,10 +35,11 @@ def imageDecomposer(inputPath, outputPath, cmapInput='binary', figsizeInput=(6.4
     #Set colourmap of output image.
     if iterateColours:
       for colourmap in matplotlib.plr.colormaps():
+        OutputPath = str(outputPath) + musicFile[0:-4] + '_' + str(colourmap) + '_image.png'
         plt.set_cmap(str(colourmap))
         plt.axis('off')
         plt.savefig(OutputPath,bbox_inches='tight')
     else:
       plt.set_cmap(str(cmapInput))
       plt.axis('off')
-      plt.savefig(OutputPath,bbox_inches='tight')
+      plt.savefig(OutputPath,bbox_inches='tight') 
