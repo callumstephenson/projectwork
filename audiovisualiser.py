@@ -6,6 +6,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import librosa
 import librosa.display
+import os
 from google.colab import drive
 def imageDecomposer(inputPath, outputPath, cmapInput='binary', figsizeInput=(6.4,4.8), hop_lengthInput=512 , n_fftInput=2048, offsetInput=0, colourIteration=False):
   '''A function to iterate over a directory filled with .mp3 files and decompose them using an FFT into .pngs. 
