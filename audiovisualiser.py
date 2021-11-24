@@ -19,7 +19,6 @@ def imageDecomposer(inputPath, outputPath, cmapInput='binary', figsizeInput=(6.4
   pre-requisite packages: numpy (as np), matplotlib.pyplot(as plt), librosa, librosa.display, os'''
   
   musicFolder = os.listdir(str(inputPath))
-  i=0
   FileAmount = len(musicFolder)
   for musicFile in musicFolder: 
     # File handling and output namescheme
