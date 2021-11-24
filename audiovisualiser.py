@@ -24,7 +24,6 @@ def imageDecomposer(inputPath, outputPath, cmapInput='binary', figsizeInput=(6.4
   for musicFile in musicFolder: 
     # File handling and output namescheme
     InputPath = str(inputPath) + musicFile
-    OutputPath = str(outputPath) + musicFile[0:-4] + '_' + str(cmapInput) + '_image.png'
     y, sr = librosa.load(InputPath,offset = offsetInput)
     # Trim Silent Edges
     plt.figure(figsize=figsizeInput)
@@ -40,6 +39,7 @@ def imageDecomposer(inputPath, outputPath, cmapInput='binary', figsizeInput=(6.4
         plt.axis('off')
         plt.savefig(OutputPath,bbox_inches='tight')
     else:
+      OutputPath = str(outputPath) + musicFile[0:-4] + '_' + str(cmapInput) + '_image.png'
       plt.set_cmap(str(cmapInput))
       plt.axis('off')
       plt.savefig(OutputPath,bbox_inches='tight') 
