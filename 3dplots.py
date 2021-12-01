@@ -9,7 +9,7 @@ X = np.arange(-4, 4, 0.25)
 Y = np.arange(-4, 4, 0.25)
 X, Y = np.meshgrid(X, Y)
 R = np.sqrt(X ** 2 + Y ** 2)
-Z = np.cos(R) + np.sin(3*X)
+Z = np.cos(R) + np.sin(X)
 
 # solid contour plot
 ax.plot_surface(X, Y, Z, rstride=1, cstride=1, cmap=plt.cm.hot)
