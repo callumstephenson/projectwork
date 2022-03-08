@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.10)  8 MAR 2022 01:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.10)  8 MAR 2022 01:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -394,24 +394,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 41--45
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.64 \end{document}
-                    [1] [2] (/Users/callumstephenson/Documents/projectwork/tex/lab_reports/elastic_beams/elastic_beams_report.aux)
+l.63         \subsection
+                        {Calculation} [1] [2] (/Users/callumstephenson/Documents/projectwork/tex/lab_reports/elastic_beams/elastic_beams_report.aux)
 Package rerunfilecheck Info: File `elastic_beams_report.out' has not changed.
-(rerunfilecheck)             Checksum: 315CF7B4676E9255C1029E196B282624;826.
+(rerunfilecheck)             Checksum: 5FC8AD01D198DAFF14E9D2965256BBAA;1006.
  ) 
 Here is how much of TeX's memory you used:
- 10415 strings out of 478994
- 160227 string characters out of 5858183
- 463048 words of memory out of 5000000
- 27774 multiletter control sequences out of 15000+600000
+ 10422 strings out of 478994
+ 160337 string characters out of 5858183
+ 463052 words of memory out of 5000000
+ 27779 multiletter control sequences out of 15000+600000
  406918 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,6n,79p,350b,351s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,6n,79p,368b,351s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on /Users/callumstephenson/Documents/projectwork/tex/lab_reports/elastic_beams/elastic_beams_report.pdf (3 pages, 33992 bytes).
+Output written on /Users/callumstephenson/Documents/projectwork/tex/lab_reports/elastic_beams/elastic_beams_report.pdf (3 pages, 34452 bytes).
 PDF statistics:
- 59 PDF objects out of 1000 (max. 8388607)
- 51 compressed objects within 1 object stream
- 10 named destinations out of 1000 (max. 500000)
- 57 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 64 PDF objects out of 1000 (max. 8388607)
+ 56 compressed objects within 1 object stream
+ 12 named destinations out of 1000 (max. 500000)
+ 65 words of extra memory for PDF output out of 10000 (max. 10000000)
 
