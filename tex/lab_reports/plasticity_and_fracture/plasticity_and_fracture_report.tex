@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+
+% import packages
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{subfloat}
+\usepackage{subfig}
+\usepackage{amsmath}
+\usepackage[toc,page]{appendix}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[left=1in,top=0.75in,right=1in,bottom=0.75in]{geometry}
+
+\graphicspath{ {./images} }
+% hyperref setup
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=blue,      
+	urlcolor=blue,
+	citecolor=blue,
+	pdftitle={Plasticity and fracture report},
+	pdfpagemode=FullScreen,
+}
+% titlepage	
+\title{\textbf{Plasticity and fracture report}}
+\author{Callum Stephenson, css47, GP173, Trinity}
+\date{}
+
+\begin{document}
+    \begin{titlepage}
+        \maketitle
+        \thispagestyle{empty}
+    \end{titlepage}
+    \section{Questions \& answers}
+        Material tested by our group: copper \\ \\
+        \subsection{Calculation}
+            (a)(i) $\sigma_y$ was around 3e8 $\frac{N}{m^2}$ \\ \\
+            (a)(ii) $\sigma_{ts}$ was around 3.5e8 $\frac{N}{m^2}$ \\ \\
+            (a)(iii) Strain to fracture ratio was 22\% \\ \\
+            (b) $E = \frac{1\div2e-5}{240e-6} = 208$ GPa \\ \\
+            (2)(i) $\sigma_y$ was around 3.75e8 $\frac{N}{m^2}$  \\ \\
+            (2){ii} $\sigma_{ts}$ was around 4.5e8 $\frac{N}{m^2}$ \\ \\
+            (2)(iii) Strain to fracture was 25\% \\ \\
+            (3)(i) $\sigma_y$ was around 3.08e8 $\frac{N}{m^2}$ \\ \\
+            (3)(ii)$\sigma_{ts}$ was around 3.59e8 $\frac{N}{m^2}$ \\ \\
+            (3)(iii) Strain to fracture was 19\%
+        \subsection{Analysis}
+            The value of E obtained for steel using the strain gauge was 208 GPa, the error is 0.95\%. The value for E accounting for
+            machine characteristic from my data is 1.71e11 (170 GPa), which was an error of 30\% , the total uncertainty usign this
+            method is around $\pm$20\% hence it is not the best method for measuring the young's modulus of a sample. \\ \\
+            The original volume of the shank was 504mm$^3$, however during the plastic deformation the sample's length increased to 30.7mm, and 
+            the crossectional area reduced to 16.4mm in the section which did not experience necking, and hence volume is conserved.  \\ \\
+            Increases in yield stress and tensile strength with work hardening - 2.7\% increase in yield stress and 2.6\% increase in yield strength.
+            Percentage reduction in s-t-f: 13.6 \% reduction in s-t-f ratio. 
+            Metal becomes less ductile when work hardened as it is hard for the dislocations to move over one another when there are already
+            multiple jogs, this means it takes more energy to slide over one another. \\ \\
+            If the initial sample were twice the length, the extension would be multiplied by 2 as it is measured in mm and not strain. Yield
+            stress and ductility would have the same values as it would still take the same amount of force to reach the plastic region, and again
+            the same amount of strain to failure ratio(as strain is a relative percentage and not an absolute measurement). \\ \\
+            During cooling the yield stress of copper increases 25\%, copper undergoes a ductile failure whereas steel undergoes a brittle failure
+            at the low temperature. Copper has a large extension with very little extra force once it reaches its plastic region when cooled to -196,
+            but the steel does not.
+\end{document}
